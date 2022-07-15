@@ -1,0 +1,20 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>Random Numbers</h1>
+<img src="{% static 'img/numbers.png' %}" />
+<p>
+	This application will allow you to choose a number, may be bigger than 60,<br>
+	and than enter below how many random numbers you want among the number you 
+have chosen above.</p>
+<form action="rand" method="POST">
+    {% csrf_token %}
+
+    <p>Enter total number: <input type="text" name="num1"></p>
+    <p>Enter how many numbers: <input type="text" name="num2"></p>
+    <input type="submit">
+</form>
+
+{% endblock %}
