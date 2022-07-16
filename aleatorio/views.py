@@ -19,7 +19,7 @@ def randomnum(request):
 		res.sort()
 
         #return render(request, "result.html", {"result":res})
-		return render(request, "result.html", {"result": (', '.join(str(e) for e in res))})
+		return render(request, "result.html", {"result": (',  '.join(str(e) for e in res))})
 
 	else:
 		res = "Only digits are allowed"
